@@ -13,20 +13,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
+      <head>
+        <link
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+          rel="stylesheet"
+        />
+      </head>
       <body className="bg-gray-50">
-        <nav className="bg-white shadow">
-          <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-blue-600">매칭 판별기</h1>
-            <ul className="flex gap-6 text-sm font-medium">
-              <li><a href="/" className="hover:text-blue-600">대시보드</a></li>
-              <li><a href="/jobs" className="hover:text-blue-600">채용공고</a></li>
-              <li><a href="/resumes" className="hover:text-blue-600">이력서</a></li>
-              <li><a href="/results" className="hover:text-blue-600">결과</a></li>
-              <li><a href="/settings" className="hover:text-blue-600">설정</a></li>
+        <nav className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+          <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
+            <h1 className="text-2xl font-bold text-blue-600 flex-shrink-0">매칭 판별기</h1>
+            <ul className="hidden md:flex gap-6 text-sm font-medium">
+              <li><a href="/" className="text-gray-700 hover:text-blue-600 transition-colors py-2">대시보드</a></li>
+              <li><a href="/jobs" className="text-gray-700 hover:text-blue-600 transition-colors py-2">채용공고</a></li>
+              <li><a href="/resumes" className="text-gray-700 hover:text-blue-600 transition-colors py-2">이력서</a></li>
+              <li><a href="/results" className="text-gray-700 hover:text-blue-600 transition-colors py-2">결과</a></li>
+              <li><a href="/settings" className="text-gray-700 hover:text-blue-600 transition-colors py-2">설정</a></li>
             </ul>
           </div>
         </nav>
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <main className="max-w-7xl mx-auto px-4 py-8 min-h-[calc(100vh-88px)]">
           {children}
         </main>
       </body>
